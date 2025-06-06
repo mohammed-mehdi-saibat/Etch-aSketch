@@ -2,8 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Press Start 2P", system-ui;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+#squares-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  height: 960px;
+  border: 2px solid red;
+}
+
+#resizeBtn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+#resizeBtn:hover {
+  background-color: white;
+  color: red;
 }
