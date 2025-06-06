@@ -18,6 +18,8 @@ body {
   width: 960px;
   height: 960px;
   border: 2px solid red;
+  align-items: center;
+  justify-content: center;
 }
 
 #resizeBtn {
@@ -33,4 +35,9 @@ body {
 #resizeBtn:hover {
   background-color: white;
   color: red;
+}
+
+.square {
+  border: 1px solid black;
+  flex: 0 0 auto;
 }
