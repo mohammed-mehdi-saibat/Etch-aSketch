@@ -15,6 +15,12 @@ resizeBtn.addEventListener("click", () => {
     alert("Invalid input, please Enter a number between 16 and 100");
   }
 });
+function getRandomColor() {
+  let randomRed = Math.floor(Math.random() * 256);
+  let randomGreen = Math.floor(Math.random() * 256);
+  let randomBlue = Math.floor(Math.random() * 256);
+  return `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+}
 
 function createGrid(size = 16) {
   const container = document.getElementById("squares-container");
@@ -29,7 +35,7 @@ function createGrid(size = 16) {
     square.style.width = `${100 / size}%`;
     square.style.height = `${100 / size}%`;
     square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "yellow";
+      square.style.backgroundColor = getRandomColor();
     });
 
     container.appendChild(square);
