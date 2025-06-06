@@ -1,5 +1,21 @@
 "use strict";
 
+const resizeBtn = document.getElementById("resizeBtn");
+
+let size;
+
+resizeBtn.addEventListener("click", () => {
+  const input = prompt("Enter a number between 17 and 100");
+  const number = Number(input);
+
+  if (number >= 16 && number <= 100 && !isNaN(number)) {
+    size = number;
+    createGrid(size);
+  } else {
+    alert("Invalid input, please Enter a number between 16 and 100");
+  }
+});
+
 function createGrid(size = 16) {
   const container = document.getElementById("squares-container");
 
