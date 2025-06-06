@@ -1,6 +1,7 @@
 "use strict";
 
 const resizeBtn = document.getElementById("resizeBtn");
+const clearBtn = document.getElementById("clearBtn");
 
 let size;
 
@@ -37,9 +38,15 @@ function createGrid(size = 16) {
     square.addEventListener("mouseover", () => {
       square.style.backgroundColor = getRandomColor();
     });
-
     container.appendChild(square);
   }
 }
 
 createGrid();
+
+clearBtn.addEventListener("click", () => {
+  const squares = document.querySelectorAll(".square");
+  squares.forEach((square) => {
+    square.style.backgroundColor = "white";
+  });
+});

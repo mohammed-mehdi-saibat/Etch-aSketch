@@ -10,16 +10,20 @@ body {
   flex-direction: column;
   margin: 20px;
   align-items: center;
+  background-image: url(retro.jpg);
+  background-repeat: no-repeat;
+  /* background-position: center; */
 }
 
 #squares-container {
   display: flex;
   flex-wrap: wrap;
-  width: 960px;
-  height: 960px;
+  width: 500px;
+  height: 500px;
   border: 2px solid red;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }
 
 #resizeBtn {
@@ -32,12 +36,32 @@ body {
   cursor: pointer;
 }
 
-#resizeBtn:hover {
+#resizeBtn:hover,
+#clearBtn:hover {
   background-color: white;
   color: red;
 }
 
 .square {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   flex: 0 0 auto;
+}
+
+.square:hover {
+  cursor: crosshair;
+}
+
+#clearBtn {
+  position: absolute;
+  transform: rotate(-90deg);
+  left: 270px;
+  top: 50%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  transition: all 0.4s;
+  cursor: pointer;
+  width: 250px;
 }
